@@ -8,14 +8,14 @@ namespace Tyuiu.FilatovDK.Sprint4.Task3.V27
             DataService ds = new DataService();
 
 
-            Console.Title = "Спринт #4 | Выполнил Кокоулин И. В. | ИБКСб-24-1";
+            Console.Title = "Спринт #4 | Выполнил Филатов Д. К. | СМАРТб-24-1";
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #4                                                               *");
             Console.WriteLine("* Тема: Создание итогового решения по спринту                             *");
             Console.WriteLine("* Задание #0                                                              *");
             Console.WriteLine("* Вариант #27                                                             *");
-            Console.WriteLine("* Выполнил: Кокоулин Иван Владимирович   | ИБКСб-24-1                     *");
+            Console.WriteLine("* Выполнил: Филатов Денис Константинович   | СМАРТб-24-1                     *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Дан двумерный целочисленный массив 5 на 5 элементов,                    *");
