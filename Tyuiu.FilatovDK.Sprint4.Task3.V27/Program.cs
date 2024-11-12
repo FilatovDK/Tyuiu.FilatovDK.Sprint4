@@ -15,7 +15,7 @@ namespace Tyuiu.FilatovDK.Sprint4.Task3.V27
             Console.WriteLine("* Тема: Создание итогового решения по спринту                             *");
             Console.WriteLine("* Задание #0                                                              *");
             Console.WriteLine("* Вариант #27                                                             *");
-            Console.WriteLine("* Выполнил: Филатов Денис Константинович   | СМАРТб-24-1                     *");
+            Console.WriteLine("* Выполнил: Филатов Денис Константинович   | СМАРТб-24-1                  *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
             Console.WriteLine("* Дан двумерный целочисленный массив 5 на 5 элементов,                    *");
