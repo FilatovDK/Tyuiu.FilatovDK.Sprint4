@@ -6,14 +6,16 @@ namespace Tyuiu.FilatovDK.Sprint4.Task5.V13.Lib
         public int[,] Calculate(int[,] matrix)
         {
             int rows = matrix.GetUpperBound(0) + 1;
-            int cols = matrix.Length / rows;
+            int columns = matrix.Length / rows;
 
             for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < cols; j++)
+                for (int j = 0; j < columns; j++)
                 {
-                    if (matrix[i, j] % 2 != 0)
+                    if (matrix[i, j] < 0)
+                    {
                         matrix[i, j] = 0;
+                    }
                 }
             }
             return matrix;
