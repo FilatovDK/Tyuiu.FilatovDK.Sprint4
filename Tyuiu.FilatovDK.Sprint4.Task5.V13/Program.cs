@@ -23,7 +23,7 @@ namespace Tyuiu.FilatovDK.Sprint4.Task5.V13
             Console.WriteLine("******************************************************************************");
 
             for (int i = 0; i < rows; i++)
-                for (int j = 0; j < rows; j++)
+                for (int j = 0; j < col; j++)
                 {
                     mtrx[i, j] = rnd.Next(-2, 5);
                 }
