@@ -7,41 +7,68 @@ namespace Tyuiu.FilatovDK.Sprint4.Task5.V13
         {
             DataService ds = new DataService();
             Random rnd = new Random();
-            Console.WriteLine("******************************************************************************");
-            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                           *");
-            Console.WriteLine("******************************************************************************");
+            Console.Title = "Спринт #4| Выполнил: Филатов Д.К. | СМАРТб-24-1";
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* Спринт #4                                                               *");
+            Console.WriteLine("* Тема: Двумерные массивы (генератор случайных чисел)                     *");
+            Console.WriteLine("* Задание #5                                                              *");
+            Console.WriteLine("* Вариант #13                                                             *");
+            Console.WriteLine("* Выполнил Филаов Д.К. | СМАРТб-24-1                                      *");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* УСЛОВИЕ:                                                                *");
+            Console.WriteLine("* Написать программу, которая заменяет отрциательные элементы на 0.       *");
+            Console.WriteLine("*                                                                         *");
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+            Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Введите коллво строк в массиве : ");
-            int rows = Convert.ToInt32(Console.ReadLine());
+            int rows = 5;
+            Console.Write("Количество строк в массиве: " + rows);
+            Console.WriteLine();
+            int columns = 5;
+            Console.Write("Количество столбцов в массиве: " + columns);
+            Console.WriteLine();
+            int[,] matrix = new int[rows, columns];
 
-            Console.WriteLine("Введите коллво столбцов в массиве : ");
-            int col = Convert.ToInt32(Console.ReadLine());
-
-
-            int[,] mtrx = new int[rows, col];
-
-            Console.WriteLine("******************************************************************************");
+            Console.WriteLine("***************************************************************************");
 
             for (int i = 0; i < rows; i++)
-                for (int j = 0; j < col; j++)
+            {
+                for (int j = 0; j < columns; j++)
                 {
-                    mtrx[i, j] = rnd.Next(-2, 5);
+                    matrix[i, j] = rnd.Next(-2, 5);
                 }
-
-            Console.WriteLine("\nМассив");
+            }
+            Console.WriteLine();
+            Console.WriteLine("\nМассив: ");
             for (int i = 0; i < rows; i++)
-                for (int j = 0; j < col; j++)
+            {
+                for (int j = 0; j < columns; j++)
                 {
-                    Console.WriteLine($"{mtrx[i, j]} \t");
+                    Console.Write($"{matrix[i, j]} \t");
                 }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
             Console.WriteLine();
 
-            Console.WriteLine();
-            Console.WriteLine("******************************************************************************");
-            Console.WriteLine("* Результат:                                                                 *");
-            Console.WriteLine("******************************************************************************");
 
-            Console.WriteLine("zxc " + ds.Calculate(mtrx));
+
+            Console.WriteLine();
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("***************************************************************************");
+
+            Console.WriteLine("Конечный массив: ");
+            matrix = ds.Calculate(matrix);
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < rows; j++)
+                {
+                    Console.Write($"{matrix[i, j]} \t");
+                }
+                Console.WriteLine();
+            }
             Console.ReadKey();
         }
     }
