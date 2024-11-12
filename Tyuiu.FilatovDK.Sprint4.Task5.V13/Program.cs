@@ -5,16 +5,18 @@ namespace Tyuiu.FilatovDK.Sprint4.Task5.V13
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
             DataService ds = new DataService();
+            Random rnd = new Random();
 
-            Console.WriteLine("Введите количество строк в массиве: ");
-            int rows = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите количество столбцов в массиве: ");
-            int columns = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("***************************************************************************");
-
+            int rows = 5;
+            Console.Write("Количество строк в массиве: " + rows);
+            Console.WriteLine();
+            int columns = 5;
+            Console.Write("Количество столбцов в массиве: " + columns);
+            Console.WriteLine();
             int[,] matrix = new int[rows, columns];
+
+            Console.WriteLine("***************************************************************************");
 
             for (int i = 0; i < rows; i++)
             {
@@ -23,8 +25,8 @@ namespace Tyuiu.FilatovDK.Sprint4.Task5.V13
                     matrix[i, j] = rnd.Next(-2, 5);
                 }
             }
-
-            Console.WriteLine("\nМассив:");
+            Console.WriteLine();
+            Console.WriteLine("\nМассив: ");
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
@@ -32,21 +34,24 @@ namespace Tyuiu.FilatovDK.Sprint4.Task5.V13
                     Console.Write($"{matrix[i, j]} \t");
                 }
                 Console.WriteLine();
-
             }
             Console.WriteLine();
+            Console.WriteLine();
 
+
+
+            Console.WriteLine();
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            int[,] res = ds.Calculate(matrix);
-
+            Console.WriteLine("Конечный массив: ");
+            matrix = ds.Calculate(matrix);
             for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < rows; j++)
                 {
-                    Console.Write($"{res[i, j]} \t");
+                    Console.Write($"{matrix[i, j]} \t");
                 }
                 Console.WriteLine();
             }

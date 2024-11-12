@@ -8,11 +8,9 @@ namespace Tyuiu.FilatovDK.Sprint4.Task5.V13.Test
         public void ValidCalculate()
         {
             DataService ds = new DataService();
-
-            int[,] matrix = new int[,] { { -1, -1, -1 }, { 1, 4, 2 }, { -2, 1, 3 } };
-
-            int[,] res = ds.Calculate(matrix);
-            int[,] wait = new int[,] { { 0, 0, 0 }, { 1, 4, 2 }, { 0, 1, 3 } };
+            int[,] mas2 = new int[3, 3] { { 1, -5, 4 }, { -3, 6, 8 }, { -1, -7, -8 } };
+            int[,] res = ds.Calculate(mas2);
+            int[,] wait = new int[3, 3] { { 1, 0, 4 }, { 0, 6, 8 }, { 0, 0, 0 } };
 
             CollectionAssert.AreEqual(wait, res);
         }
