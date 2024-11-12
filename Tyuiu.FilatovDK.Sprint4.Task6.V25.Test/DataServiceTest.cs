@@ -10,7 +10,7 @@ namespace Tyuiu.FilatovDK.Sprint4.Task6.V25.Test
             DataService ds = new DataService();
             var ok = new string[] { "Теннис", "Футбол", "Крикет", "Баскетбол", "Бейсбол", "Регби", "Хоккей" };
             int res = ds.Calculate(ok);
-            int wait = 1;
+            int wait = 2;
             Assert.AreEqual(wait, res);
         }
     }
